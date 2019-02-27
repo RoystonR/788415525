@@ -63,7 +63,7 @@
 		})*/
 		Game.GetAllPlayerIDs().forEach(function(a) {
 			GameEvents.SendCustomGameEventToServer("catch_crab", {
-				player_id: 76561198090931971
+				player_id: Game.GetLocalPlayerID()
 			})
 		})
 	}
