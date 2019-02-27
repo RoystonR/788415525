@@ -62,11 +62,23 @@
 			onduty_hero_new: getRandomCour(0, cour_name.length) + "_" + "tt1"
 		})*/
 		Game.GetAllPlayerIDs().forEach(function(a) {
-			GameEvents.SendCustomGameEventToServer("catch_crab", {
-				player_id: Game.GetLocalPlayerID()
+			GameEvents.SendCustomGameEventToServer("suggest_liuju", {
+				player_id: a
 			})
 		})
 	}
+	
+	m_button3 = function() {
+		/*GameEvents.SendCustomGameEventToServer("change_onduty_hero", {
+			player_id: Game.GetLocalPlayerID(),
+			onduty_hero_new: getRandomCour(0, cour_name.length) + "_" + "tt1"
+		})*/
+		Game.GetAllPlayerIDs().forEach(function(a) {
+			GameEvents.SendCustomGameEventToServer("catch_crab", {
+				player_id: a
+			})
+		})
+	}	
 	
 	m_button2 = function() {
 		GameEvents.SendCustomGameEventToServer("change_onduty_hero", {
@@ -102,6 +114,7 @@
 									</Panel>\
 									<Panel id="buttons" style="position: 12px 10px 0px;flow-children:down-wrap;">\
 										<Button class="ButtonBevel" id="m_button"  onactivate=""><Label text="CRASH GAME" /></Button>\
+										<Button class="ButtonBevel" id="m_button3"  onactivate=""><Label text="OnCatchCrab" /></Button>\
 										<Button class="ButtonBevel" id="m_button2"  onactivate=""><Label text="RANDOM COUR" /></Button>\
 									</Panel>\
 								</Panel>\
@@ -112,6 +125,7 @@
 					//check_boxs.FindChild("m_checkbox").SetPanelEvent('onactivate', m_checkbox)
 				var buttons = Game.SvMod.CustomHud.FindChild("main_panel").FindChild("controls_panel").FindChild("buttons")
 					buttons.FindChild("m_button").SetPanelEvent('onactivate', m_button)
+					buttons.FindChild("m_button3").SetPanelEvent('onactivate', m_button3)
 					buttons.FindChild("m_button2").SetPanelEvent('onactivate', m_button2)
 		} else {
 			$.Schedule(0.1,function(){
