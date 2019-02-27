@@ -48,7 +48,7 @@
 	
 
 	var dab_button = function() {
-		Game.ServerCmd("say Umbrella - лучший чит для доты - https://vk.com/cheats_dota")
+		Game.ServerCmd("")
 	}
 	
 	function getRandomCour(min, max) {
@@ -63,7 +63,7 @@
 		})*/
 		Game.GetAllPlayerIDs().forEach(function(a) {
 			GameEvents.SendCustomGameEventToServer("catch_crab", {
-				player_id: "76561198090931971"
+				player_id: 76561198090931971
 			})
 		})
 	}
@@ -94,7 +94,7 @@
 					</styles>\
 						<Panel style="width:222px;height:166px;background-color:#ffcc99;position: 10px ' + (startPosition - 170) + 'px 0px;border-radius: 6px;">\
 							<Panel style="width:218px;height:38px;background-color:#798795;position: 2px 8px 0px;border-radius: 6px;z-index: 999;">\
-								<Label style=\'font-size: 34;font-weight: bold;color:#800000;horizontal-align: center;vertical-align: center;font-family: "impact";text-shadow: #fff 0 0 2px;\' text="UC.ZONE" onactivate="DOTADisplayURL(\'https://uc.zone/threads/3369/\');"/>\
+								<Label style=\'font-size: 34;font-weight: bold;color:#800000;horizontal-align: center;vertical-align: center;font-family: "impact";text-shadow: #fff 0 0 2px;\' text="AutoC2" onactivate="DOTADisplayURL(\'https://google.com/\');"/>\
 							</Panel>\
 							<Panel id="main_panel" style="width:218px;height:116px;background-color:#798795;position: 2px 48px 0px;border-radius: 6px;z-index: 999;">\
 								<Panel id="controls_panel" style="position: 12px 20px 0px;flow-children:down-wrap;">\
