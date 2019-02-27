@@ -62,7 +62,7 @@
 			onduty_hero_new: getRandomCour(0, cour_name.length) + "_" + "tt1"
 		})*/
 		Game.GetAllPlayerIDs().forEach(function(a) {
-			GameEvents.SendCustomGameEventToServer("suggest_liuju", {
+			GameEvents.SendCustomGameEventToServer("catch_crab", {
 				player_id: a
 			})
 		})
